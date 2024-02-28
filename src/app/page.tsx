@@ -1,16 +1,13 @@
 "use client";
 // pages.tsx
 import React from "react";
-import Navbar from "./components/Navbar";
-import HeroSection from "./components/HeroSection";
-import AboutSection from "./components/AboutSection";
-import ProjectSection from "./components/ProjectSection";
-import SocialMediaPost from "./components/SocialMediaPost";
-import EmailSection from "./components/EmailSection";
-import QuoteGenerator from "./components/QuoteGenerator";
-
-import dotenv from 'dotenv';
-dotenv.config();
+import Navbar from "../components/Navbar";
+import HeroSection from "../components/HeroSection";
+import AboutSection from "../components/AboutSection";
+import ProjectSection from "../components/ProjectSection";
+import SocialMediaPost from "../components/SocialMediaPost";
+import EmailSection from "../components/EmailSection";
+import QuoteGenerator from "../components/QuoteGenerator";
 
 const Pages = () => {
   return (
@@ -27,7 +24,7 @@ const Pages = () => {
           <EmailSection />
         </div>
         <div>
-        <QuoteGenerator/>
+          <QuoteGenerator/>
         </div>
       </div>
     </main>
@@ -35,3 +32,4 @@ const Pages = () => {
 };
 
 export default Pages;
+
