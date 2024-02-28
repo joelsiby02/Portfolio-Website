@@ -44,15 +44,13 @@ const HeroSection = () => {
       {/* Right column */}
       <div className="sm:col-span-1 lg:col-span-6 place-self-center mt-4 sm:mt-0 lg:mt-4">
         <div className="rounded-full border-4 border-purple-400 bg-[#0e0e0e] w-full h-[250px] sm:h-[300px] lg:h-[500px] relative flex justify-center items-center overflow-hidden">
-        <Image
-  src="https://via.placeholder.com/350x500" // Placeholder image URL
-  alt="Profile Picture"
-  layout="intrinsic"
-  width={350}
-  height={500}
-/>
-
-
+          <Image
+            src="https://via.placeholder.com/350x500" // Placeholder image URL
+            alt="Profile Picture"
+            layout="intrinsic"
+            width={350}
+            height={500}
+          />
         </div>
       </div>
     </section>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import Image from 'next/image';
 
 const SocialMediaPost = () => {
   const [activePlatform, setActivePlatform] = useState('linkedin');
@@ -65,7 +65,7 @@ const SocialMediaPost = () => {
             key={post.id}
             className="w-full rounded-lg overflow-hidden shadow-md relative transition-transform transform hover:scale-105"
           >
-            <img src={post.imageUrl} alt={`Social Media Post ${post.id}`} className="w-full" />
+            <Image src={post.imageUrl} alt={`Social Media Post ${post.id}`} layout="fill" objectFit="cover" />
           </div>
         ))}
       </div>

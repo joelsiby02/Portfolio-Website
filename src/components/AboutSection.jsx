@@ -112,24 +112,24 @@ const AboutSection = () => {
                   About <span className="text-indigo-600">Me</span>
                 </h2>
                 <p className="text-white-700 font-serif text-lg sm:text-xl">
-                  I'm a passionate student pursuing my Bachelor's degree in
-                  Computer Science & Engineering (B.Tech), with a keen interest
-                  in Data Science and Generative AI. Since childhood, I've been
+                  I&apos;m a passionate student pursuing my Bachelor&apos;s degree in
+                  Computer Science &amp; Engineering (B.Tech), with a keen interest
+                  in Data Science and Generative AI. Since childhood, I&apos;ve been
                   fascinated by the idea of building intelligent systems that
                   can understand and interact with the world around us, just
                   like the iconic AI assistant, Friday, from the Iron Man.
                 </p>
                 <div className="mb-4"></div>
                 <p className="text-white-700 font-serif text-lg sm:text-xl">
-                  Driven by my passion for technology and innovation, I'm
+                  Driven by my passion for technology and innovation, I&apos;m
                   constantly exploring new concepts and pushing the boundaries
-                  of what's possible. Whether it's diving deep into machine
+                  of what&apos;s possible. Whether it&apos;s diving deep into machine
                   learning algorithms or experimenting with neural networks,
-                  I'm always eager to learn and grow in the field of AI.
+                  I&apos;m always eager to learn and grow in the field of AI.
                 </p>
                 <div className="mb-4"></div>
                 <p className="text-white-700 font-serif text-lg sm:text-xl">
-                  In addition to my technical pursuits, I'm also dedicated to
+                  In addition to my technical pursuits, I&apos;m also dedicated to
                   fostering a collaborative and inclusive environment in the
                   tech community. I believe in the power of teamwork and
                   diversity to drive innovation and create positive change in
