@@ -33,7 +33,7 @@ const HeroSection = () => {
           />
         </h1>
         <p className="text-gray-300 text-sm sm:text-base lg:text-lg xl:text-xl mb-6">
-          I'm a Developer with a passion for AI and Generative-AI.
+          Im a Developer with a passion for AI and Generative-AI.
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
           <button className="px-6 py-3 w-full sm:w-auto rounded-full bg-gradient-to-r from-purple-400 to-blue-600 text-white hover:opacity-90 transition-all duration-300 transform hover:scale-105">Hire Me</button>

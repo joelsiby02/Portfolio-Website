@@ -37,10 +37,10 @@ const EmailSection = () => {
       <div className="bg-gray-900 rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2"></div>
       <div className="z-10">
         <h2 className="text-center my-7 font-bold text-3xl sm:text-4xl font-serif">
-          Let's <span className="text-indigo-600">Connect</span>
+          Lets <span className="text-indigo-600">Connect</span>
         </h2>
         <p className="text-[#ADB7BE] mb-4 max-w-md font-semi bold text-center font-serif mx-auto">
-          I'm currently looking for new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!
+          Im currently looking for new opportunities, my inbox is always open. Whether you have a question or just want to say hi, Ill try my best to get back to you!
         </p>
         <div className="socials flex justify-center gap-4">
           <a href="https://github.com" className="text-white hover:text-gray-300" target="_blank" rel="noopener noreferrer">
