@@ -36,8 +36,19 @@ const HeroSection = () => {
           Im a Developer with a passion for AI and Generative-AI.
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
-          <button className="px-6 py-3 w-full sm:w-auto rounded-full bg-gradient-to-r from-purple-400 to-blue-600 text-white hover:opacity-90 transition-all duration-300 transform hover:scale-105">Hire Me</button>
-          <button className="px-6 py-3 w-full sm:w-auto rounded-full bg-gradient-to-r from-blue-400 to-purple-600 hover:bg-gray-200 text-white hover:text-gray-900 border border-gray-300 mt-3 sm:mt-0 transition-all duration-300 transform hover:scale-105">Download CV</button>
+          
+<a href="https://www.linkedin.com/in/joel-siby-752916277/" target="_blank" rel="noopener noreferrer">
+  <button className="px-6 py-3 w-full sm:w-auto rounded-full bg-gradient-to-r from-purple-400 to-blue-600 text-white hover:opacity-90 transition-all duration-300 transform hover:scale-105">
+    Hire Me
+  </button>
+</a>
+
+          <a href="https://drive.google.com/file/d/1NYaBYxomPXtir1U7AtrGPc0dPCYRq953/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+  <button className="px-6 py-3 w-full sm:w-auto rounded-full bg-gradient-to-r from-blue-400 to-purple-600 hover:bg-gray-200 text-white hover:text-gray-900 border border-gray-300 mt-3 sm:mt-0 transition-all duration-300 transform hover:scale-105">
+    Download CV
+  </button>
+</a>
+
         </div>
       </div>
 
