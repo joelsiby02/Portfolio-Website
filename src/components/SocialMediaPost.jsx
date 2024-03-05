@@ -11,7 +11,7 @@ const SocialMediaPost = () => {
   const posts = [
     {
       id: 1,
-      imageUrl: 'https://github.com/joelsiby02/Post-Embedding-Portfolio/blob/main/Linkdin/DatawarsP.jpg?raw=true',
+      imageUrl: 'https://github.com/joelsiby02/Post-Embedding-Portfolio/blob/main/Linkdin/ExamPost.png?raw=true',
       platform: 'linkedin',
     },
     {
