@@ -1,12 +1,17 @@
 module.exports = {
   images: {
-    domains: ['github.com'],
+    domains: ['raw.githubusercontent.com', 'via.placeholder.com'],
+    // If you have additional image sources, you can configure them using remotePatterns
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'via.placeholder.com', // Specify the hostname of your image server
-        port: '', // If your image source doesn't use a specific port, leave it empty
-        pathname: '/350x500/**', // Specify the path pattern for your images
+        hostname: 'raw.githubusercontent.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'via.placeholder.com',
+        port: '',
+        pathname: '/350x500/**',
       },
     ],
   },

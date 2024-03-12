@@ -11,17 +11,17 @@ const SocialMediaPost = () => {
   const posts = [
     {
       id: 1,
-      imageUrl: 'https://github.com/joelsiby02/Post-Embedding-Portfolio/blob/main/Linkdin/ExamPost.png?raw=true',
+      imageUrl: 'https://raw.githubusercontent.com/joelsiby02/Post-Embedding-Portfolio/main/Linkdin/DatawarsP.jpg',
       platform: 'linkedin',
     },
     {
-      id: 1,
-      imageUrl: 'https://github.com/joelsiby02/Post-Embedding-Portfolio/blob/main/Linkdin/DatawarsP.jpg?raw=true',
+      id: 2,
+      imageUrl: 'https://raw.githubusercontent.com/joelsiby02/Post-Embedding-Portfolio/main/Linkdin/DatawarsP.jpg',
       platform: 'linkedin',
     },
-    
     // Add more posts as needed
   ];
+  
 
   const filteredPosts = activePlatform === 'all' ? posts : posts.filter(post => post.platform === activePlatform);
 
