@@ -1,7 +1,5 @@
 module.exports = {
   images: {
-    domains: ['raw.githubusercontent.com', 'via.placeholder.com'],
-    // If you have additional image sources, you can configure them using remotePatterns
     remotePatterns: [
       {
         protocol: 'https',
