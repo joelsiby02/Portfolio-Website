@@ -43,10 +43,10 @@ const EmailSection = () => {
           Im currently looking for new opportunities, my inbox is always open. Whether you have a question or just want to say hi, Ill try my best to get back to you!
         </p>
         <div className="socials flex justify-center gap-4">
-          <a href="https://github.com" className="text-white hover:text-gray-300" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/joelsiby02" className="text-white hover:text-gray-300" target="_blank" rel="noopener noreferrer">
             GitHub
           </a>
-          <a href="https://linkedin.com" className="text-white hover:text-gray-300" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/joel-siby-752916277/" className="text-white hover:text-gray-300" target="_blank" rel="noopener noreferrer">
             LinkedIn
           </a>
         </div>
