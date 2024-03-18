@@ -47,8 +47,9 @@ const EmailSection = () => {
             GitHub
           </a>
           <a href="https://www.linkedin.com/in/joel-siby-752916277/" className="text-white hover:text-gray-300" target="_blank" rel="noopener noreferrer">
-            LinkedIn
+            Linkedin
           </a>
+          
         </div>
       </div>
       <div>
