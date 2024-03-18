@@ -17,7 +17,7 @@ const projects = [
     id: 2,
     title: 'Project 2',
     category: 'web',
-    imageUrl: 'https://th.bing.com/th/id/OIP.0QdY6CfqIgN3M6zohVdkZQAAAA?rs=1&pid=ImgDetMain',
+    imageUrl: 'https://th.bing.com/th/id/OIP.5fG1-UmL9d06fQ96orThZgHaFj?rs=1&pid=ImgDetMain',
     githubUrl: 'https://github.com/joelsiby02/ConvoQuery',
     demoUrl: 'https://example.com/project-2-demo',
     description: 'Chatbot for your Store Data',
