@@ -4,23 +4,23 @@ const projects = [
   {
     id: 1,
     title: 'Project 1',
-    category: 'web',
-    imageUrl: 'https://6ixwebsoft.com/wp-content/uploads/2020/02/bann.png',
+    category: ['web', 'mobile'],
+    imageUrl: 'https://th.bing.com/th/id/OIP.E-Zm81v0kLUdlYJ6aDFkVQHaE8?w=2340&h=1560&rs=1&pid=ImgDetMain',
     githubUrl: 'https://github.com/joelsiby02/E-commerce-TshirtStore',
-    demoUrl: 'https://example.com/project-1-demo',
+    demoUrl: 'https://team6mini.vercel.app/',
     description: 'Cara E-Commerce T-Shirt Store ',
     previewUrl: 'https://example.com/project-1-preview',
     underConstruction: true,
     latest: false,
-  },  
+  },
   {
     id: 2,
     title: 'Project 2',
     category: 'web',
-    imageUrl: 'https://th.bing.com/th/id/OIP.O5WnSZmVNjxjHquHZobvIAHaD4?rs=1&pid=ImgDetMain',
+    imageUrl: 'https://th.bing.com/th/id/OIP.0QdY6CfqIgN3M6zohVdkZQAAAA?rs=1&pid=ImgDetMain',
     githubUrl: 'https://github.com/joelsiby02/ConvoQuery',
     demoUrl: 'https://example.com/project-2-demo',
-    description: 'Description of Project 2',
+    description: 'Chatbot for your Store Data',
     previewUrl: 'https://example.com/project-2-preview',
     underConstruction: false,
     latest: true,
@@ -31,12 +31,48 @@ const projects = [
     category: 'web',
     imageUrl: 'https://th.bing.com/th/id/OIP.H7mnZVOOFZhlqM7rtzd6UwHaE8?w=1600&h=1068&rs=1&pid=ImgDetMain',
     githubUrl: 'https://github.com/joelsiby02/TubeTrove-AIContent-Creator',
-    demoUrl: 'https://example.com/project-3-demo',
-    description: 'Description of Project 3',
+    demoUrl: 'https://www.youtube.com/watch?v=kWPpe0sI7JE',
+    description: 'YouTube Cotent Title Generator',
     previewUrl: 'https://example.com/project-3-preview',
     underConstruction: false,
     latest: false,
   },
+  // {
+  //   id: 3,
+  //   title: 'Project 3',
+  //   category: 'web',
+  //   imageUrl: 'https://th.bing.com/th/id/OIP.H7mnZVOOFZhlqM7rtzd6UwHaE8?w=1600&h=1068&rs=1&pid=ImgDetMain',
+  //   githubUrl: 'https://github.com/joelsiby02/TubeTrove-AIContent-Creator',
+  //   demoUrl: 'https://example.com/project-3-demo',
+  //   description: 'Description of Project 3',
+  //   previewUrl: 'https://example.com/project-3-preview',
+  //   underConstruction: false,
+  //   latest: false,
+  // },
+  // {
+  //   id: 3,
+  //   title: 'Project 3',
+  //   category: 'web',
+  //   imageUrl: 'https://th.bing.com/th/id/OIP.H7mnZVOOFZhlqM7rtzd6UwHaE8?w=1600&h=1068&rs=1&pid=ImgDetMain',
+  //   githubUrl: 'https://github.com/joelsiby02/TubeTrove-AIContent-Creator',
+  //   demoUrl: 'https://example.com/project-3-demo',
+  //   description: 'Description of Project 3',
+  //   previewUrl: 'https://example.com/project-3-preview',
+  //   underConstruction: false,
+  //   latest: false,
+  // },
+  // {
+  //   id: 3,
+  //   title: 'Project 3',
+  //   category: 'web',
+  //   imageUrl: 'https://th.bing.com/th/id/OIP.H7mnZVOOFZhlqM7rtzd6UwHaE8?w=1600&h=1068&rs=1&pid=ImgDetMain',
+  //   githubUrl: 'https://github.com/joelsiby02/TubeTrove-AIContent-Creator',
+  //   demoUrl: 'https://example.com/project-3-demo',
+  //   description: 'Description of Project 3',
+  //   previewUrl: 'https://example.com/project-3-preview',
+  //   underConstruction: false,
+  //   latest: false,
+  // },
   // Add more projects as needed
 ];
 
@@ -64,7 +100,13 @@ const ProjectSection = () => {
   const filteredProjects =
     activeCategory === 'all'
       ? projects
-      : projects.filter((project) => project.category === activeCategory || project.category === 'web');
+      : projects.filter((project) => {
+          if (activeCategory === 'mobile' && project.category.includes(activeCategory)) {
+            return true;
+          } else {
+            return project.category === activeCategory;
+          }
+        });
 
   return (
     <div id="projects" className="container mx-auto px-4 md:px-8 lg:px-16 xl:px-24">
@@ -96,7 +138,7 @@ const ProjectSection = () => {
             onMouseEnter={() => setActiveProject(project.id)}
             onMouseLeave={() => setActiveProject(null)}
           >
-            <img src={project.imageUrl} alt={project.title} className="w-full h-64 object-cover" />
+            <img src={project.imageUrl} alt={project.title} className="w-full h-60 object-cover" />
             <div className="p-4 bg-white">
               <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
               <p className="text-gray-600 mb-4">{project.description}</p>
