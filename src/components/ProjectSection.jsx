@@ -1,24 +1,24 @@
-import React, { useState } from "react";
+import React from "react";
 
 const projects = [
   {
     id: 1,
     title: 'Project 1',
     category: 'web',
-    imageUrl: 'https://via.placeholder.com/150',
-    githubUrl: 'https://github.com/your-username/project-1',
+    imageUrl: 'https://6ixwebsoft.com/wp-content/uploads/2020/02/bann.png',
+    githubUrl: 'https://github.com/joelsiby02/E-commerce-TshirtStore',
     demoUrl: 'https://example.com/project-1-demo',
-    description: 'Description of Project 1',
+    description: 'Cara E-Commerce T-Shirt Store ',
     previewUrl: 'https://example.com/project-1-preview',
     underConstruction: true,
     latest: false,
-  },
+  },  
   {
     id: 2,
     title: 'Project 2',
-    category: 'mobile',
-    imageUrl: 'https://via.placeholder.com/150',
-    githubUrl: 'https://github.com/your-username/project-2',
+    category: 'web',
+    imageUrl: 'https://th.bing.com/th/id/OIP.O5WnSZmVNjxjHquHZobvIAHaD4?rs=1&pid=ImgDetMain',
+    githubUrl: 'https://github.com/joelsiby02/ConvoQuery',
     demoUrl: 'https://example.com/project-2-demo',
     description: 'Description of Project 2',
     previewUrl: 'https://example.com/project-2-preview',
@@ -29,8 +29,8 @@ const projects = [
     id: 3,
     title: 'Project 3',
     category: 'web',
-    imageUrl: 'https://via.placeholder.com/150',
-    githubUrl: 'https://github.com/your-username/project-3',
+    imageUrl: 'https://th.bing.com/th/id/OIP.H7mnZVOOFZhlqM7rtzd6UwHaE8?w=1600&h=1068&rs=1&pid=ImgDetMain',
+    githubUrl: 'https://github.com/joelsiby02/TubeTrove-AIContent-Creator',
     demoUrl: 'https://example.com/project-3-demo',
     description: 'Description of Project 3',
     previewUrl: 'https://example.com/project-3-preview',
@@ -41,8 +41,8 @@ const projects = [
 ];
 
 const ProjectSection = () => {
-  const [activeCategory, setActiveCategory] = useState('all');
-  const [activeProject, setActiveProject] = useState(null);
+  const [activeCategory, setActiveCategory] = React.useState('all');
+  const [activeProject, setActiveProject] = React.useState(null);
 
   const handleCategoryChange = (category) => {
     setActiveCategory(category);
@@ -96,7 +96,7 @@ const ProjectSection = () => {
             onMouseEnter={() => setActiveProject(project.id)}
             onMouseLeave={() => setActiveProject(null)}
           >
-            <img src={project.imageUrl} alt={project.title} className="w-full" />
+            <img src={project.imageUrl} alt={project.title} className="w-full h-64 object-cover" />
             <div className="p-4 bg-white">
               <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
               <p className="text-gray-600 mb-4">{project.description}</p>

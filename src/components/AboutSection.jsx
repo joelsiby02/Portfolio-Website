@@ -1,53 +1,15 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Transition } from "@headlessui/react";
-import TabButton from "./TabButton";
 
-const TAB_DATA = [
-  {
-    title: "Skills",
-    id: "skills",
-    content: (
-      <ul className="list-disc pl-2">
-        <li>Python</li>
-        <li>Machine Learning</li>
-        <li>Deep Learning</li>
-        <li>Computer Vision (CV)</li>
-        <li>Natural Language Processing (NLP)</li>
-        <li>Generative AI</li>
-        <li>Flask</li>
-        <li>Streamlit</li>
-        <li>Langchain</li>
-        <li>SQL</li>
-      </ul>
-    ),
-  },
-  {
-    title: "Programming Languages",
-    id: "programming-languages",
-    content: (
-      <ul className="list-disc pl-2">
-        <li>C</li>
-        <li>Python</li>
-        <li>JavaScript</li>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>SQL</li>
-      </ul>
-    ),
-  },
-  {
-    title: "Education",
-    id: "education",
-    content: (
-      <ul className="list-disc pl-2">
-        <li>B-Tech in CSE, Musaliar College of Engineering Patanamthitta</li>
-      </ul>
-    ),
-  },
-];
+// Component to render each icon as a link
+const IconLink = ({ href, src, alt }) => (
+  <a className="m-2" href={href} target="_blank" rel="noreferrer">
+    <img src={src} width="36" height="36" alt={alt} />
+  </a>
+);
 
 const AboutSection = () => {
-  const [tab, setTab] = useState("skills");
+  const [tab, setTab] = useState("about");
   const [showContent, setShowContent] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
   const [isScrollingDown, setIsScrollingDown] = useState(false);
@@ -143,30 +105,55 @@ const AboutSection = () => {
                   shape a future where technology enhances our lives in
                   meaningful and empowering ways.
                 </p>
-                <div className="flex flex-row justify-start mt-8">
-                  {TAB_DATA.map((tabItem) => (
-                    <TabButton
-                      key={tabItem.id}
-                      onClick={() => handleTabChange(tabItem.id)}
-                      active={tab === tabItem.id}
-                    >
-                      {tabItem.title}
-                    </TabButton>
-                  ))}
-                </div>
-                <Transition
-                  show={tab !== null}
-                  enter="transition-opacity duration-500"
-                  enterFrom="opacity-0"
-                  enterTo="opacity-100"
-                  leave="transition-opacity duration-500"
-                  leaveFrom="opacity-100"
-                  leaveTo="opacity-0"
-                >
-                  <div className="mt-8" id="skills-container">
-                    {tab && TAB_DATA.find((t) => t.id === tab)?.content}
+
+                <div className="mt-8">
+                  {/* Skills heading */}
+                  <h4 className="text-center text-4xl font-bold mb-4">Skills</h4>
+                  {/* Skills icons */}
+                  <div className="flex justify-center flex-wrap">
+                    {/* First row of icons */}
+                    <div className="flex items-center justify-center mb-4">
+                      <IconLink href="https://docs.microsoft.com/en-us/cpp/?view=msvc-170" src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/c-colored.svg" alt="C" />
+                      <IconLink href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/javascript-colored.svg" alt="JavaScript" />
+                      <IconLink href="https://www.oracle.com/java/" src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/java-colored.svg" alt="Java" />
+                      <IconLink href="https://git-scm.com/" src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/git-colored.svg" alt="Git" />
+                      <IconLink href="https://www.typescriptlang.org/" src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/typescript-colored.svg" alt="TypeScript" />
+                      <IconLink href="https://www.python.org/" src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/python-colored.svg" alt="Python" />
+                      <IconLink href="https://www.visualstudiocode.com" src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/visualstudiocode.svg" alt="VS Code" />
+                      <IconLink href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/html5-colored.svg" alt="HTML5" />
+                      <IconLink href="https://reactjs.org/" src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/react-colored.svg" alt="React" />
+                      <IconLink href="https://nextjs.org/docs" src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/nextjs-colored-dark.svg" alt="NextJs" />
+                      <IconLink href="https://www.w3.org/TR/CSS/#css" src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/css3-colored.svg" alt="CSS3" />
+                      <IconLink href="https://sass-lang.com/" src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/sass-colored.svg" alt="Sass" />
+                      <IconLink href="https://tailwindcss.com/" src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/tailwindcss-colored.svg" alt="TailwindCSS" />
+                    </div>
+                    {/* Second row of icons */}
+                    <div className="flex items-center justify-center">
+                      <IconLink href="https://nodejs.org/en/" src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/nodejs-colored.svg" alt="NodeJS" />
+                      <IconLink href="https://expressjs.com/" src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/express-colored-dark.svg" alt="Express" />
+                      <IconLink href="https://fastapi.tiangolo.com/" src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/fastapi-colored.svg" alt="Fast API" />
+                      <IconLink href="https://www.mysql.com/" src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/mysql-colored.svg" alt="MySQL" />
+                      <IconLink href="https://supabase.io/" src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/supabase-colored.svg" alt="Supabase" />
+                      <IconLink href="https://www.heroku.com/" src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/heroku-colored.svg" alt="Heroku" />
+                      <IconLink href="https://firebase.google.com/" src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/firebase-colored.svg" alt="Firebase" />
+                      <IconLink href="https://flask.palletsprojects.com/en/2.0.x/" src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/flask-colored-dark.svg" alt="Flask" />
+                      <IconLink href="https://www.adobe.com/uk/products/premiere.html" src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/premierepro-colored-dark.svg" alt="Premiere Pro" />
+                      <IconLink href="https://www.adobe.com/uk/products/photoshop.html" src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/photoshop-colored-dark.svg" alt="Photoshop" />
+                      <IconLink href="https://www.figma.com/" src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/figma-colored.svg" alt="Figma" />
+                      <IconLink href="https://filebase.com/" src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/filebase-colored.svg" alt="Filebase" />
+                      <IconLink href="https://cloud.google.com/" src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/googlecloud-colored.svg" alt="Google Cloud" />
+                      <IconLink href="https://wordpress.com" src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/wordpress-colored.svg" alt="Wordpress" />
+                      <IconLink href="https://wix.com" src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/wix-colored.svg" alt="Wix" />
+                      <IconLink href="https://www.djangoproject.com/" src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/django-colored-dark.svg" alt="Django" />
+                      <IconLink href="https://aws.amazon.com" src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/aws-colored-dark.svg" alt="Amazon Web Services" />
+                      <IconLink href="https://www.docker.com/" src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/docker-colored.svg" alt="Docker" />
+                      <IconLink href="https://www.linux.org" src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/linux-colored.svg" alt="Linux" />
+                      <IconLink href="https://pytorch.org/" src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/pytorch-colored.svg" alt="PyTorch" />
+                      <IconLink href="https://www.tensorflow.org/" src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/tensorflow-colored.svg" alt="TensorFlow" />
+                      <IconLink href="https://www.raspberrypi.org/" src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/raspberrypi-colored.svg" alt="Raspberry Pi" />
+                    </div>
                   </div>
-                </Transition>
+                </div>
               </div>
             </Transition>
           </div>
